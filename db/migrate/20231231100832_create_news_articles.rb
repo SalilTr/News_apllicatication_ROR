@@ -5,6 +5,7 @@ class CreateNewsArticles < ActiveRecord::Migration[7.1]
       t.string :sub_topic
       t.text :content
       t.references :user, null: false, foreign_key: true
+      t.references :category, null: false, foreign_key: true
 
       t.timestamps
     end

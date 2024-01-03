@@ -1,3 +1,4 @@
 class Category < ApplicationRecord
-  belongs_to :news_article
+  has_many :news_articles, dependent: :destroy
+  validates :name, presence: true
 end
